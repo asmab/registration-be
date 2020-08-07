@@ -2,7 +2,7 @@ export enum userRole {
     USER,
     MENTOR,
     AUTHOR
-  }
+}
 
 export class User {
     readonly id: number;
