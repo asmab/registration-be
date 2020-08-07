@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 
-import { User } from '../user';
-import { Users } from '../users';
+import { Registration } from '../registration';
+import { Registrations } from '../registrations';
 
 @Injectable()
-export class UsersService {
+export class RegistrationsService {
 
-    private readonly users: Users = {
+    private readonly registrations: Registrations = {
         1: {
           id: 1,
           username: 'user 1',
@@ -21,17 +21,16 @@ export class UsersService {
           }
       };
 
-    findAll(): Users {
-        return this.users;
+    findAll(): Registrations {
+        return this.registrations;
     }
 
-    create(newUser: User) : User {
+    create(newRegistration: Registration) : Registration {
         const id = new Date().valueOf();
-        this.users[id] = {
-          ...newUser,
+        this.registrations[id] = {
+          ...newRegistration,
           id,
         };
-        return newUser;
+        return newRegistration;
     }
-
 }

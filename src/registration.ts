@@ -1,4 +1,4 @@
-export class User {
+export class Registration {
     readonly id: number;
     readonly username: string;
     readonly email: string;
